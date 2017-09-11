@@ -1,0 +1,925 @@
+Model = N6despot6POMDPXE
+Random root seed = 832628000
+Search depth = 90
+Discount = 0.5
+Simulation steps = 90
+Number of scenarios = 500
+Search time per step = 1
+Regularization constant = 0
+Lower bound = DEFAULT
+Upper bound = DEFAULT
+Policy simulation depth = 90
+Target gap ratio = 0.95
+
+####################################### Round 0 #######################################
+Initial state: 
+[scene_1:sr_l]
+
+-----------------------------------Round 0 Step 0-----------------------------------
+- Action = 0:Up
+- State:
+[scene_1:sr_l]
+- Observation = [obs_sensor:xms_l]
+- ObsProb = 0.032258
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 0 / 0
+
+-----------------------------------Round 0 Step 1-----------------------------------
+- Action = 2:Right
+- State:
+[scene_1:sl_r]
+- Observation = [obs_sensor:sl_r]
+- ObsProb = 0.0769
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 0 / 0
+
+-----------------------------------Round 0 Step 2-----------------------------------
+- Action = 0:Up
+- State:
+[scene_1:xst_r]
+- Observation = [obs_sensor:xmt_r]
+- ObsProb = 0.03125
+- Reward = 200
+- Current rewards:
+  discounted / undiscounted = 50 / 200
+
+-----------------------------------Round 0 Step 3-----------------------------------
+- Action = 0:Up
+- State:
+[scene_1:tr_r]
+- Observation = [obs_sensor:mr_r]
+- ObsProb = 0.15
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 50 / 200
+
+-----------------------------------Round 0 Step 4-----------------------------------
+- Action = 0:Up
+- State:
+[scene_1:tr_r]
+- Observation = [obs_sensor:ml_r]
+- ObsProb = 0.025
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 50 / 200
+
+-----------------------------------Round 0 Step 5-----------------------------------
+- Action = 0:Up
+- State:
+[scene_1:xm_r]
+- Observation = [obs_sensor:xsm_r]
+- ObsProb = 0.2
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 50 / 200
+
+-----------------------------------Round 0 Step 6-----------------------------------
+- Action = 0:Up
+- State:
+[scene_1:ml_r]
+- Observation = [obs_sensor:xtm_r]
+- ObsProb = 0.051282
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 50 / 200
+
+-----------------------------------Round 0 Step 7-----------------------------------
+- Action = 2:Right
+- State:
+[scene_1:xm_r]
+- Observation = [obs_sensor:tr_r]
+- ObsProb = 0.0769
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 50 / 200
+
+-----------------------------------Round 0 Step 8-----------------------------------
+- Action = 0:Up
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = 0
+- Current rewards:
+  discounted / undiscounted = 50 / 200
+
+-----------------------------------Round 0 Step 9-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9805 / 190
+
+-----------------------------------Round 0 Step 10-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9707 / 180
+
+-----------------------------------Round 0 Step 11-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9658 / 170
+
+-----------------------------------Round 0 Step 12-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9634 / 160
+
+-----------------------------------Round 0 Step 13-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9622 / 150
+
+-----------------------------------Round 0 Step 14-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9615 / 140
+
+-----------------------------------Round 0 Step 15-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9612 / 130
+
+-----------------------------------Round 0 Step 16-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9611 / 120
+
+-----------------------------------Round 0 Step 17-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.961 / 110
+
+-----------------------------------Round 0 Step 18-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.961 / 100
+
+-----------------------------------Round 0 Step 19-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.961 / 90
+
+-----------------------------------Round 0 Step 20-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 80
+
+-----------------------------------Round 0 Step 21-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 70
+
+-----------------------------------Round 0 Step 22-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 60
+
+-----------------------------------Round 0 Step 23-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 50
+
+-----------------------------------Round 0 Step 24-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 40
+
+-----------------------------------Round 0 Step 25-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 30
+
+-----------------------------------Round 0 Step 26-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 20
+
+-----------------------------------Round 0 Step 27-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 10
+
+-----------------------------------Round 0 Step 28-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / 0
+
+-----------------------------------Round 0 Step 29-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -10
+
+-----------------------------------Round 0 Step 30-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -20
+
+-----------------------------------Round 0 Step 31-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -30
+
+-----------------------------------Round 0 Step 32-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -40
+
+-----------------------------------Round 0 Step 33-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -50
+
+-----------------------------------Round 0 Step 34-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -60
+
+-----------------------------------Round 0 Step 35-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -70
+
+-----------------------------------Round 0 Step 36-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -80
+
+-----------------------------------Round 0 Step 37-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -90
+
+-----------------------------------Round 0 Step 38-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -100
+
+-----------------------------------Round 0 Step 39-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -110
+
+-----------------------------------Round 0 Step 40-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -120
+
+-----------------------------------Round 0 Step 41-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -130
+
+-----------------------------------Round 0 Step 42-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -140
+
+-----------------------------------Round 0 Step 43-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -150
+
+-----------------------------------Round 0 Step 44-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -160
+
+-----------------------------------Round 0 Step 45-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -170
+
+-----------------------------------Round 0 Step 46-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -180
+
+-----------------------------------Round 0 Step 47-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -190
+
+-----------------------------------Round 0 Step 48-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -200
+
+-----------------------------------Round 0 Step 49-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -210
+
+-----------------------------------Round 0 Step 50-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -220
+
+-----------------------------------Round 0 Step 51-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -230
+
+-----------------------------------Round 0 Step 52-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -240
+
+-----------------------------------Round 0 Step 53-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -250
+
+-----------------------------------Round 0 Step 54-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -260
+
+-----------------------------------Round 0 Step 55-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -270
+
+-----------------------------------Round 0 Step 56-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -280
+
+-----------------------------------Round 0 Step 57-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -290
+
+-----------------------------------Round 0 Step 58-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -300
+
+-----------------------------------Round 0 Step 59-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -310
+
+-----------------------------------Round 0 Step 60-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -320
+
+-----------------------------------Round 0 Step 61-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -330
+
+-----------------------------------Round 0 Step 62-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -340
+
+-----------------------------------Round 0 Step 63-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -350
+
+-----------------------------------Round 0 Step 64-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -360
+
+-----------------------------------Round 0 Step 65-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -370
+
+-----------------------------------Round 0 Step 66-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -380
+
+-----------------------------------Round 0 Step 67-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -390
+
+-----------------------------------Round 0 Step 68-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -400
+
+-----------------------------------Round 0 Step 69-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -410
+
+-----------------------------------Round 0 Step 70-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -420
+
+-----------------------------------Round 0 Step 71-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -430
+
+-----------------------------------Round 0 Step 72-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -440
+
+-----------------------------------Round 0 Step 73-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -450
+
+-----------------------------------Round 0 Step 74-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -460
+
+-----------------------------------Round 0 Step 75-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -470
+
+-----------------------------------Round 0 Step 76-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -480
+
+-----------------------------------Round 0 Step 77-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -490
+
+-----------------------------------Round 0 Step 78-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -500
+
+-----------------------------------Round 0 Step 79-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -510
+
+-----------------------------------Round 0 Step 80-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -520
+
+-----------------------------------Round 0 Step 81-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -530
+
+-----------------------------------Round 0 Step 82-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -540
+
+-----------------------------------Round 0 Step 83-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -550
+
+-----------------------------------Round 0 Step 84-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -560
+
+-----------------------------------Round 0 Step 85-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -570
+
+-----------------------------------Round 0 Step 86-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -580
+
+-----------------------------------Round 0 Step 87-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -590
+
+-----------------------------------Round 0 Step 88-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -600
+
+-----------------------------------Round 0 Step 89-----------------------------------
+- Action = 3:Stop
+- State:
+[scene_1:CRASH]
+- Observation = [obs_sensor:CRASH]
+- ObsProb = 1
+- Reward = -10
+- Current rewards:
+  discounted / undiscounted = 49.9609 / -610
+
+Simulation terminated in 90 steps
+Total discounted reward = 49.9609
+Total undiscounted reward = -610
+
+Completed 1 run(s).
+Average total discounted reward (stderr) = 49.9609 (0)
+Average total undiscounted reward (stderr) = -610 (0)
+Total time: Real / CPU = 0.378853 / 0.373079s
