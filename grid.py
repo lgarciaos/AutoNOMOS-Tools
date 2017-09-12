@@ -247,6 +247,14 @@ class App:
 		
 master = Tk()
 
+img = PhotoImage(file="media/icon.png")
+scale_w = 64/1744
+scale_h = 34/3334
+img = img.subsample(32)
+master.tk.call('wm', 'iconphoto', master._w, img)
+
+
+
 app = App(master)
 master.title("AutoNOMOS GUI")
 file_obj = open(file_name, "r")
