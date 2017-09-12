@@ -26,11 +26,13 @@ for arg in sys.argv[1:]:
 class App:
 	def __init__(self, master):
 
-		self.frame = Frame(master, bg='grey', width=512, height=50)
+		self.frame = Frame(master, bg='grey', width=1024, height=50)
 		self.frame.pack()
 
 		self.w = Canvas(master, width = 512, height = 384, background = "black")
-		self.w.pack()
+		self.w.pack(side = LEFT)
+		self.w2 = Canvas(master, width = 512, height = 384, background = "black")
+		self.w2.pack(side = RIGHT)
 
 		self.button1 = Button(self.frame, text='Step', command=self.next_state)
 		self.button1.pack(side=RIGHT)
@@ -39,7 +41,7 @@ class App:
 		lane_width = 20
 		num_center_lines = 8
 		
-		# grid rectangles
+		# grid rectangles state
 		self.grid_0 = self.w.create_rectangle(128,  0,256,128, fill="black", activefill="orange", stipple="gray50")
 		self.grid_1 = self.w.create_rectangle(256,  0,384,128, fill="black", activefill="orange", stipple="gray50")
 		self.grid_2 = self.w.create_rectangle(128,128,256,256, fill="black", activefill="orange", stipple="gray50")
@@ -47,30 +49,58 @@ class App:
 		self.grid_4 = self.w.create_rectangle(128,256,256,384, fill="black", activefill="orange", stipple="gray50")
 		self.grid_5 = self.w.create_rectangle(256,256,384,384, fill="black", activefill="orange", stipple="gray50")
 		
+		# grid rectangles observation
+		self.grid_obs_0 = self.w2.create_rectangle(128,  0,256,128, fill="black", activefill="orange", stipple="gray50")
+		self.grid_obs_1 = self.w2.create_rectangle(256,  0,384,128, fill="black", activefill="orange", stipple="gray50")
+		self.grid_obs_2 = self.w2.create_rectangle(128,128,256,256, fill="black", activefill="orange", stipple="gray50")
+		self.grid_obs_3 = self.w2.create_rectangle(256,128,384,256, fill="black", activefill="orange", stipple="gray50")
+		self.grid_obs_4 = self.w2.create_rectangle(128,256,256,384, fill="black", activefill="orange", stipple="gray50")
+		self.grid_obs_5 = self.w2.create_rectangle(256,256,384,384, fill="black", activefill="orange", stipple="gray50")
+
 		# left lane
 		self.w.create_rectangle(128 - lane_width /2 ,0,128 + lane_width /2 ,385, fill = "white")
+		self.w2.create_rectangle(128 - lane_width /2 ,0,128 + lane_width /2 ,385, fill = "white")
 		
 		# right lane 
 		self.w.create_rectangle(384 - lane_width /2, 0, 384 + lane_width /2, 384, fill = "white")
+		self.w2.create_rectangle(384 - lane_width /2, 0, 384 + lane_width /2, 384, fill = "white")
 		
 		# central lines
 		for i in xrange(0,num_center_lines):
 			self.w.create_rectangle(256 - lane_width /4, i*384/num_center_lines, 256 +  lane_width / 4, i*384/num_center_lines + 25, fill = "white")
+			self.w2.create_rectangle(256 - lane_width /4, i*384/num_center_lines, 256 +  lane_width / 4, i*384/num_center_lines + 25, fill = "white")
 
+		# arrows left
+		self.arrow_ru = self.w.create_line(320,320,320,256, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_rr = self.w.create_line(320,320,384,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_rl = self.w.create_line(320,320,256,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+
+		# arrow right
+		self.arrow_lu = self.w.create_line(192,320,192,256, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_lr = self.w.create_line(192,320,256,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_ll = self.w.create_line(192,320,128,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		
 		# autonomos image
-		self.image = Image.open("autonomos_alpha.png")
+		self.image = Image.open("media/autonomos_alpha.png")
 		self.image = self.image.resize((34, 64), Image.ANTIALIAS) 
 		self.photo = ImageTk.PhotoImage(self.image)
 		self.autonomos_image = self.w.create_image(320, 320, image = self.photo)
 
+		# autonomos image obs
+		self.autonomos_image_obs = self.w2.create_image(320, 320, image = self.photo)
 
+		# labels
+		self.w.create_rectangle(222, 360, 290, 390, fill = "white")
+		self.label_w = self.w.create_text((256, 375), text="States", fill = "red", font = ("Helvetica", 16))
+
+		self.w2.create_rectangle(187, 360, 322, 390, fill = "white")
+		self.label_w2 = self.w2.create_text((256, 375), text="Observations", fill = "red", font = ("Helvetica", 16))
 
 	def next_state(self):
 		global STATE
 		STATE = "STEP"
 
-	def test(self, master, case):
-
+	def test(self, master, case, action, observation):
 
 		# 0 <- black
 		# 1 <- yellow
@@ -113,6 +143,22 @@ class App:
 					self.grid_4,
 					self.grid_5
 					]
+		gridx_arr_obs = [
+					self.grid_obs_0,
+					self.grid_obs_1,
+					self.grid_obs_2,
+					self.grid_obs_3,
+					self.grid_obs_4,
+					self.grid_obs_5
+					]
+		arrow_arr = [
+					self.arrow_ru,
+					self.arrow_rl,
+					self.arrow_rr,
+					self.arrow_lu,
+					self.arrow_ll,
+					self.arrow_lr,
+					]	
 		color_map = \
 			{
 				0 : "black",
@@ -147,22 +193,62 @@ class App:
 				"xms_l" : 23 ,
 				"CRASH" : 24 
 			}
+
+		action_map = \
+			{
+				"rUp"   : 0,
+				"rRight": 1,
+				"rLeft" : 2,
+				"lUp"   : 3,
+				"lRight": 4,
+				"lLeft" : 5,
+				"HUp"   : 6,
+				"HRight": 6,
+				"HLeft" : 6,
+				"HStop" : 6,
+				"lStop" : 6,
+				"rStop" : 6
+			}
+		action_map.setdefault(6)
+		action_arr = \
+			[
+				[NORMAL, HIDDEN, HIDDEN, HIDDEN, HIDDEN, HIDDEN],
+				[HIDDEN, NORMAL, HIDDEN, HIDDEN, HIDDEN, HIDDEN],
+				[HIDDEN, HIDDEN, NORMAL, HIDDEN, HIDDEN, HIDDEN],
+				[HIDDEN, HIDDEN, HIDDEN, NORMAL, HIDDEN, HIDDEN],
+				[HIDDEN, HIDDEN, HIDDEN, HIDDEN, NORMAL, HIDDEN],
+				[HIDDEN, HIDDEN, HIDDEN, HIDDEN, HIDDEN, NORMAL],
+				[HIDDEN, HIDDEN, HIDDEN, HIDDEN, HIDDEN, HIDDEN],
+			]
+
 		colors_arr = edos_matrix[ edos_map[case] ]
+		colors_arr_obs = edos_matrix[ edos_map[observation] ]
 		
 		for grid, color in zip(gridx_arr, colors_arr):
 			self.w.itemconfig(grid, fill=color_map[color])
 
+		for grid, color in zip(gridx_arr_obs, colors_arr_obs):
+			self.w2.itemconfig(grid, fill=color_map[color])
+
+		act = action_arr[ action_map[ (case[-1] + action) ] ]
+
+		for arrow, arr in zip(arrow_arr, act):
+			self.w.itemconfig(arrow, state = arr)
+
 		if case[-1] == "r":
 			self.w.coords(self.autonomos_image, 320,320)
+			self.w2.coords(self.autonomos_image_obs, 320,320)
 		elif case[-1] == "l":
 			self.w.coords(self.autonomos_image, 192,320)
+			self.w2.coords(self.autonomos_image_obs, 192,320)
 		elif case == "CRASH":
 			self.w.coords(self.autonomos_image, 256,320)
+			self.w2.coords(self.autonomos_image_obs, 256,320)
 		
 master = Tk()
 
 app = App(master)
-
+master.title("AutoNOMOS GUI")
 file_obj = open(file_name, "r")
 
 master.update()
@@ -200,7 +286,7 @@ while 1:
 	if STATE == "IDLE":
 		pass
 		
-	App.test(app, master, case)
+	App.test(app, master, case, action, observation)
 	master.update_idletasks()
 	master.update()
 
