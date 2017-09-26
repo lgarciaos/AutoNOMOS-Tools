@@ -72,13 +72,13 @@ class App:
 
 		# arrows left
 		self.arrow_ru = self.w.create_line(320,320,320,256, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
-		self.arrow_rr = self.w.create_line(320,320,384,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
-		self.arrow_rl = self.w.create_line(320,320,256,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_rl = self.w.create_line(320,320,384,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_rr = self.w.create_line(320,320,256,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
 
 		# arrow right
 		self.arrow_lu = self.w.create_line(192,320,192,256, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
-		self.arrow_lr = self.w.create_line(192,320,256,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
-		self.arrow_ll = self.w.create_line(192,320,128,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_ll = self.w.create_line(192,320,256,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
+		self.arrow_lr = self.w.create_line(192,320,128,320, arrow = LAST, width = 3, fill = "red", state = HIDDEN )
 		
 		# autonomos image
 		self.image = Image.open("media/autonomos_alpha.png")
