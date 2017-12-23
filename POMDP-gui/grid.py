@@ -13,6 +13,7 @@ STATE = "INIT"
 file_name = ""
 next_arg_file = False
 for arg in sys.argv[1:]:
+	print arg
 	if next_arg_file:
 		file_name = arg
 	else:
@@ -41,21 +42,31 @@ class App:
 		lane_width = 20
 		num_center_lines = 8
 		
+		stipple_color_out = "gray75"
+		stipple_color_in = "gray50"
+		fill_in = "black"
+		activefill_in = "orange"
+		fill_out = "green"
+
 		# grid rectangles state
-		self.grid_0 = self.w.create_rectangle(128,  0,256,128, fill="black", activefill="orange", stipple="gray50")
-		self.grid_1 = self.w.create_rectangle(256,  0,384,128, fill="black", activefill="orange", stipple="gray50")
-		self.grid_2 = self.w.create_rectangle(128,128,256,256, fill="black", activefill="orange", stipple="gray50")
-		self.grid_3 = self.w.create_rectangle(256,128,384,256, fill="black", activefill="orange", stipple="gray50")
-		self.grid_4 = self.w.create_rectangle(128,256,256,384, fill="black", activefill="orange", stipple="gray50")
-		self.grid_5 = self.w.create_rectangle(256,256,384,384, fill="black", activefill="orange", stipple="gray50")
+		self.grid_left  = self.w.create_rectangle(  0,0,128,384, fill = fill_out, stipple = stipple_color_out)
+		self.grid_right = self.w.create_rectangle(384,0,512,384, fill = fill_out, stipple = stipple_color_out)
+		self.grid_0 = self.w.create_rectangle(128,  0,256,128, fill = fill_in, activefill = activefill_in , stipple = stipple_color_in)
+		self.grid_1 = self.w.create_rectangle(256,  0,384,128, fill = fill_in, activefill = activefill_in , stipple = stipple_color_in)
+		self.grid_2 = self.w.create_rectangle(128,128,256,256, fill = fill_in, activefill = activefill_in , stipple = stipple_color_in)
+		self.grid_3 = self.w.create_rectangle(256,128,384,256, fill = fill_in, activefill = activefill_in , stipple = stipple_color_in)
+		self.grid_4 = self.w.create_rectangle(128,256,256,384, fill = fill_in, activefill = activefill_in , stipple = stipple_color_in)
+		self.grid_5 = self.w.create_rectangle(256,256,384,384, fill = fill_in, activefill = activefill_in , stipple = stipple_color_in)
 		
 		# grid rectangles observation
-		self.grid_obs_0 = self.w2.create_rectangle(128,  0,256,128, fill="black", activefill="orange", stipple="gray50")
-		self.grid_obs_1 = self.w2.create_rectangle(256,  0,384,128, fill="black", activefill="orange", stipple="gray50")
-		self.grid_obs_2 = self.w2.create_rectangle(128,128,256,256, fill="black", activefill="orange", stipple="gray50")
-		self.grid_obs_3 = self.w2.create_rectangle(256,128,384,256, fill="black", activefill="orange", stipple="gray50")
-		self.grid_obs_4 = self.w2.create_rectangle(128,256,256,384, fill="black", activefill="orange", stipple="gray50")
-		self.grid_obs_5 = self.w2.create_rectangle(256,256,384,384, fill="black", activefill="orange", stipple="gray50")
+		self.grid_obs_left  = self.w2.create_rectangle(  0,0,128,384, fill = fill_out, stipple = stipple_color_out)
+		self.grid_obs_right = self.w2.create_rectangle(384,0,512,384, fill = fill_out, stipple = stipple_color_out)
+		self.grid_obs_0 = self.w2.create_rectangle(128,  0,256,128, fill = fill_in, activefill = activefill_in, stipple = stipple_color_in)
+		self.grid_obs_1 = self.w2.create_rectangle(256,  0,384,128, fill = fill_in, activefill = activefill_in, stipple = stipple_color_in)
+		self.grid_obs_2 = self.w2.create_rectangle(128,128,256,256, fill = fill_in, activefill = activefill_in, stipple = stipple_color_in)
+		self.grid_obs_3 = self.w2.create_rectangle(256,128,384,256, fill = fill_in, activefill = activefill_in, stipple = stipple_color_in)
+		self.grid_obs_4 = self.w2.create_rectangle(128,256,256,384, fill = fill_in, activefill = activefill_in, stipple = stipple_color_in)
+		self.grid_obs_5 = self.w2.create_rectangle(256,256,384,384, fill = fill_in, activefill = activefill_in, stipple = stipple_color_in)
 
 		# left lane
 		self.w.create_rectangle(128 - lane_width /2 ,0,128 + lane_width /2 ,385, fill = "white")
