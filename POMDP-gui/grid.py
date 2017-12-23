@@ -3,28 +3,46 @@ from Tkinter import *
 from PIL import Image, ImageTk
 import re
 import sys
+import argparse
+# import atexit
 
 # print "This is the name of the script: ", sys.argv[0]
 # print "Number of arguments: ", len(sys.argv)
 # print "The arguments are: " , str(sys.argv)
+master = Tk()
 
 VERBOSE = False
-STATE = "INIT"
+
 file_name = ""
 next_arg_file = False
-for arg in sys.argv[1:]:
-	print arg
-	if next_arg_file:
-		file_name = arg
-	else:
-		if "v" in arg:
-			VERBOSE = True
-		if "f" in arg:
-			next_arg_file = True
-		# file_name = arg
 
+
+parser = argparse.ArgumentParser(description='GUI for showing POMDP output')
+
+parser.add_argument('-f', '--file', dest='file',
+                   help='The file where the POMDP output was written.')
+parser.add_argument('-v', '--verbose', dest='verbose', action='store_true')
+                   # const=VERBOSE, default=False
+                   # help='The file where the POMDP output was written.')
+
+args = parser.parse_args()
+
+file_name = args.file
+VERBOSE = args.verbose
+
+def on_closing():
+    # if messagebox.askokcancel("Quit", "Do you want to quit?"):
+	master.destroy()
 
 class App:
+	STATE = "INIT"
+	case = ""
+	last_state = ""
+	line = ""
+	action = ""
+	observation = ""
+	file_obj = ""
+
 	def __init__(self, master):
 
 		self.frame = Frame(master, bg='grey', width=1024, height=50)
@@ -35,7 +53,7 @@ class App:
 		self.w2 = Canvas(master, width = 512, height = 384, background = "black")
 		self.w2.pack(side = RIGHT)
 
-		self.button1 = Button(self.frame, text='Step', command=self.next_state)
+		self.button1 = Button(self.frame, text='Step', command=self.state_step)
 		self.button1.pack(side=RIGHT)
 
 		# variables for lanes
@@ -107,15 +125,88 @@ class App:
 		self.w2.create_rectangle(187, 360, 322, 390, fill = "white")
 		self.label_w2 = self.w2.create_text((256, 375), text="Observations", fill = "red", font = ("Helvetica", 16))
 
+		self.file_obj = open(file_name, "r")
+
+		self.state_init()
+		self.state_edo_ini()
+
+		if VERBOSE:
+			print "At __init__"
+		# state_
+
 	def next_state(self):
-		global STATE
-		STATE = "STEP"
+		# App.STATE
+		self.STATE = "STEP"
+		# self.run_sim()
+
+	def state_init(self):
+		# if self.STATE == "INIT":
+		self.line = self.file_obj.readline()
+		while self.line[0] != "#":
+			self.line = self.file_obj.readline()
+		self.STATE = "EDO_INI"
+
+		global VERBOSE
+		if VERBOSE:
+			print self.STATE
+
+	def state_edo_ini(self):
+		# elif self.STATE == "EDO_INI":
+		self.line = self.file_obj.readline()
+		self.line = self.file_obj.readline()
+		self.case = re.search(':(.+?)\]', self.line).group(0)
+		self.STATE = "STEP"
+
+		if VERBOSE:
+			print self.STATE
+
+	def state_step(self):
+		# elif self.STATE == "STEP":
+		while "Action" not in self.line:
+			self.line = self.file_obj.readline()
+		self.action = self.line.split(':')[1].rstrip() #re.search(':(.+?)(.*)', line).group(1)
+		self.line = self.file_obj.readline()
+		self.line = self.file_obj.readline()
+		self.case = re.search(':(.+?)\]', self.line).group(1)	
+		self.line = self.file_obj.readline()
+		self.observation = re.search(':(.+?)\]', self.line).group(1)
+		print "action:", self.action,"\tcase:", self.case,"\tobservation:", self.observation
+		self.STATE = "IDLE"
+
+		if self.action != "" or self.observation != "":
+			self.test(master, self.case, self.action, self.observation)
+
+		if VERBOSE:
+			print self.STATE
+
+	def state_idle(self):
+	
+		global VERBOSE
+		if VERBOSE:
+			print self.STATE
+	
+		# elif self.STATE == "IDLE":
+		pass
+
+
+		
+
+	def on_closing(self):
+   #  	global VERBOSE
+   #  	if VERBOSE:
+			# print "closing the app"
+
+		master.destroy()
 
 	def test(self, master, case, action, observation):
 
 		# 0 <- black
 		# 1 <- yellow
 		# 2 <- red
+
+		if VERBOSE:
+			print "At test"
+
 		edos_matrix = [ 				
 					#0,1,2,3,4,5 		
 					[0,0,0,0,0,0], #0
@@ -256,7 +347,7 @@ class App:
 			self.w.coords(self.autonomos_image, 256,320)
 			self.w2.coords(self.autonomos_image_obs, 256,320)
 		
-master = Tk()
+
 
 img = PhotoImage(file="media/icon.png")
 scale_w = 64/1744
@@ -268,47 +359,23 @@ master.tk.call('wm', 'iconphoto', master._w, img)
 
 app = App(master)
 master.title("AutoNOMOS GUI")
-file_obj = open(file_name, "r")
+
 
 master.update()
 
-case = ""
 
-while 1:
-	if STATE == "INIT":
-		print STATE if VERBOSE else ""
-		line = file_obj.readline()
-		while line[0] != "#":
-			line = file_obj.readline()
-		STATE = "EDO_INI"
 
-	if STATE == "EDO_INI":
-		print STATE if VERBOSE else ""
-		line = file_obj.readline()
-		line = file_obj.readline()
-		case = re.search(':(.+?)\]', line).group(0)
-		STATE = "STEP"
+
+# while 1:
 	
-	if STATE == "STEP":
-		print STATE if VERBOSE else ""
-		while "Action" not in line:
-			line = file_obj.readline()
-		action = line.split(':')[1].rstrip() #re.search(':(.+?)(.*)', line).group(1)
-		line = file_obj.readline()
-		line = file_obj.readline()
-		case = re.search(':(.+?)\]', line).group(1)	
-		line = file_obj.readline()
-		observation = re.search(':(.+?)\]', line).group(1)
-		print "action:", action,"\tcase:", case,"\tobservation:", observation
-		STATE = "IDLE"
+	# atexit.register(on_closing)
+# App.run_sim(app)
 
-	if STATE == "IDLE":
-		pass
-		
-	App.test(app, master, case, action, observation)
-	master.update_idletasks()
-	master.update()
-
+# master.update_idletasks()
+# master.wm_protocol("WM_DELETE_WINDOW", app.on_closing)
+# master.update()
+master.mainloop()
+	
 
 
 
