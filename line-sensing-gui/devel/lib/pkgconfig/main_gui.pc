@@ -1,0 +1,8 @@
+prefix=/home/gary/AutoNOMOS-Tools/line-sensing-gui/devel
+
+Name: main_gui
+Description: Description of main_gui
+Version: 0.0.0
+Cflags: -I/home/gary/AutoNOMOS-Tools/line-sensing-gui/src/main_gui/include -I/home/gary/AutoNOMOS-Tools/line-sensing-gui/devel/include
+Libs: -L/home/gary/AutoNOMOS-Tools/line-sensing-gui/devel/lib -lmain_gui
+Requires: rqt_gui rqt_gui_cpp image_transport cv_bridge

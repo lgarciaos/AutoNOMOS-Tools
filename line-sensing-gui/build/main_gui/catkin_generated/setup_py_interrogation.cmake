@@ -1,0 +1,6 @@
+set(main_gui_SETUP_PY_VERSION "0.0.0")
+set(main_gui_SETUP_PY_SCRIPTS "")
+set(main_gui_SETUP_PY_PACKAGES "main_gui")
+set(main_gui_SETUP_PY_PACKAGE_DIRS "src/main_gui")
+set(main_gui_SETUP_PY_MODULES "")
+set(main_gui_SETUP_PY_MODULE_DIRS "")
