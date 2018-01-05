@@ -298,15 +298,6 @@ image_transport_DIR:PATH=/opt/ros/kinetic/ros_catkin_ws/install_isolated/share/i
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libcv_bridge.so
 
-//Value Computed by CMake
-main_gui_BINARY_DIR:STATIC=/home/gary/AutoNOMOS-Tools/line-sensing-gui/build/main_gui
-
-//Dependencies for the target
-main_gui_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librqt_gui_cpp.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libqt_gui_cpp.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libnodeletlib.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libbondcpp.so;general;/usr/lib64/libuuid.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libimage_transport.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libmessage_filters.so;general;/usr/lib64/libtinyxml2.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libclass_loader.so;general;/usr/lib64/libPocoFoundation.so;general;/usr/lib64/libdl.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libroscpp.so;general;/usr/lib64/libpthread.so;general;/usr/lib64/libboost_signals.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libroslib.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librospack.so;general;//lib64/libpython2.7.so;general;/usr/lib64/libboost_filesystem.so;general;/usr/lib64/libboost_program_options.so;general;/usr/lib64/libtinyxml.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libcv_bridge.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libopencv_core3.so.3.3.1;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libopencv_imgproc3.so.3.3.1;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libopencv_imgcodecs3.so.3.3.1;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librosconsole.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librosconsole_backend_interface.so;general;/usr/lib64/liblog4cxx.so;general;/usr/lib64/libboost_regex.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librostime.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libcpp_common.so;general;/usr/lib64/libboost_system.so;general;/usr/lib64/libboost_thread.so;general;/usr/lib64/libboost_chrono.so;general;/usr/lib64/libboost_date_time.so;general;/usr/lib64/libboost_atomic.so;general;/usr/lib64/libconsole_bridge.so;general;Qt5::Widgets;
-
-//Value Computed by CMake
-main_gui_SOURCE_DIR:STATIC=/home/gary/AutoNOMOS-Tools/line-sensing-gui/src/main_gui
-
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/ros_catkin_ws/install_isolated/share/message_filters/cmake
 
@@ -348,6 +339,15 @@ rospack_DIR:PATH=/opt/ros/kinetic/ros_catkin_ws/install_isolated/share/rospack/c
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/ros_catkin_ws/install_isolated/share/rostime/cmake
+
+//Value Computed by CMake
+rqt_autonomos_line_calibration_BINARY_DIR:STATIC=/home/gary/AutoNOMOS-Tools/line-sensing-gui/build/rqt_autonomos_line_calibration
+
+//Dependencies for the target
+rqt_autonomos_line_calibration_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librqt_gui_cpp.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libqt_gui_cpp.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libnodeletlib.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libbondcpp.so;general;/usr/lib64/libuuid.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libimage_transport.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libmessage_filters.so;general;/usr/lib64/libtinyxml2.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libclass_loader.so;general;/usr/lib64/libPocoFoundation.so;general;/usr/lib64/libdl.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libroscpp.so;general;/usr/lib64/libpthread.so;general;/usr/lib64/libboost_signals.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libroslib.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librospack.so;general;//lib64/libpython2.7.so;general;/usr/lib64/libboost_filesystem.so;general;/usr/lib64/libboost_program_options.so;general;/usr/lib64/libtinyxml.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libcv_bridge.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libopencv_core3.so.3.3.1;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libopencv_imgproc3.so.3.3.1;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libopencv_imgcodecs3.so.3.3.1;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librosconsole.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librosconsole_backend_interface.so;general;/usr/lib64/liblog4cxx.so;general;/usr/lib64/libboost_regex.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/librostime.so;general;/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib/libcpp_common.so;general;/usr/lib64/libboost_system.so;general;/usr/lib64/libboost_thread.so;general;/usr/lib64/libboost_chrono.so;general;/usr/lib64/libboost_date_time.so;general;/usr/lib64/libboost_atomic.so;general;/usr/lib64/libconsole_bridge.so;general;Qt5::Widgets;
+
+//Value Computed by CMake
+rqt_autonomos_line_calibration_SOURCE_DIR:STATIC=/home/gary/AutoNOMOS-Tools/line-sensing-gui/src/rqt_autonomos_line_calibration
 
 //The directory containing a CMake configuration file for rqt_gui.
 rqt_gui_DIR:PATH=/opt/ros/kinetic/ros_catkin_ws/install_isolated/share/rqt_gui/cmake

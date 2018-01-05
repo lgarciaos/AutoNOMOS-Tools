@@ -1,1 +1,0 @@
-set(ORDERED_PATHS "/opt/ros/kinetic/ros_catkin_ws/install_isolated/lib")

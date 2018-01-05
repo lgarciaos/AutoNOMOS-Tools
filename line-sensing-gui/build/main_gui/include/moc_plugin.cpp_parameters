@@ -1,6 +1,0 @@
--DROS_BUILD_SHARED_LIBS=1
--DROS_PACKAGE_NAME="main_gui"
--DROSCONSOLE_BACKEND_LOG4CXX
--o
-/home/gary/AutoNOMOS-Tools/line-sensing-gui/build/main_gui/include/moc_plugin.cpp
-/home/gary/AutoNOMOS-Tools/line-sensing-gui/src/main_gui/include/plugin.h

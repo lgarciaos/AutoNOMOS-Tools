@@ -1,6 +1,0 @@
--DROS_BUILD_SHARED_LIBS=1
--DROS_PACKAGE_NAME="main_gui"
--DROSCONSOLE_BACKEND_LOG4CXX
--o
-/home/gary/AutoNOMOS-Tools/line-sensing-gui/build/main_gui/include/moc_ratio_layouted_frame.cpp
-/home/gary/AutoNOMOS-Tools/line-sensing-gui/src/main_gui/include/ratio_layouted_frame.h

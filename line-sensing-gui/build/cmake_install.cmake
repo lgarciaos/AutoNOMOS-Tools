@@ -121,7 +121,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gary/AutoNOMOS-Tools/line-sensing-gui/build/main_gui/cmake_install.cmake")
+  include("/home/gary/AutoNOMOS-Tools/line-sensing-gui/build/rqt_autonomos_line_calibration/cmake_install.cmake")
 
 endif()
 

@@ -4,4 +4,4 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs("main_gui")
+subdirs("rqt_autonomos_line_calibration")

@@ -1,2 +1,2 @@
-main_gui
+rqt_autonomos_line_calibration
 -DCATKIN_DEVEL_PREFIX=/home/gary/AutoNOMOS-Tools/line-sensing-gui/devel -DCMAKE_INSTALL_PREFIX=/home/gary/AutoNOMOS-Tools/line-sensing-gui/install -G Unix Makefiles

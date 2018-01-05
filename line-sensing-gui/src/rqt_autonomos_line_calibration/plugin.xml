@@ -1,0 +1,17 @@
+<library path="librqt_autonomos_line_calibration">
+  <class name="rqt_autonomos_line_calibration/line_calibration_plugin" type="rqt_autonomos_line_calibration::line_calibration_plugin" base_class_type="rqt_gui_cpp::Plugin">
+    <description>
+      An example C++ GUI plugin to create a great user interface.
+    </description>
+    <qtgui>
+      <group>
+        <label>AutoNOMOS</label>
+        <icon type="theme">folder</icon>
+        <statustip>Plugins related to visualization.</statustip>
+      </group>
+      <label>Line Sensing Plugin</label>
+      <icon type="theme">image-x-generic</icon>
+      <statustip>Great user interface to provide real value.</statustip>
+    </qtgui>
+  </class>
+</library>

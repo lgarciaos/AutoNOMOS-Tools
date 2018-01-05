@@ -1,0 +1,6 @@
+<launch>
+
+  
+  	<include file="$(find line_detection_fu_mod)/launch/line_detection_fu.launch" />
+	<!-- <node name="gui_node" pkg="rqt" type="line_detection_fu_node" output="screen" />  -->
+</launch>
