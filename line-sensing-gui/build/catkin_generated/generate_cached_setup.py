@@ -12,7 +12,7 @@ try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in "/opt/ros/kinetic/ros_catkin_ws/devel_isolated/xacro;/opt/ros/kinetic/ros_catkin_ws/install_isolated".split(';'):
+    for workspace in "/home/gary/AutoNOMOS-Tools/line-sensing-gui/devel;/opt/ros/kinetic/ros_catkin_ws/devel_isolated/xacro;/opt/ros/kinetic/ros_catkin_ws/install_isolated".split(';'):
         python_path = os.path.join(workspace, 'lib/python2.7/site-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)

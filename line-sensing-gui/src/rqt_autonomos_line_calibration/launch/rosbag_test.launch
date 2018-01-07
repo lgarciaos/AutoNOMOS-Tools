@@ -1,6 +1,12 @@
 <launch>
 
-  
-  	<include file="$(find line_detection_fu_mod)/launch/line_detection_fu.launch" />
-	<!-- <node name="gui_node" pkg="rqt" type="line_detection_fu_node" output="screen" />  -->
+	<arg name="rosbag_file"/>
+	<!-- <arg name="file_1" default="my_file_1" /> -->
+	<!-- <arg name="file_2" default="my_file_2" /> -->
+ 
+  	<!-- <include file="$(find line_detection_fu_mod)/launch/line_detection_fu.launch" /> -->
+	<node name="gui_node" pkg="rqt_autonomos_line_calibration" type="rqt_autonomos_line_calibration" output="screen" /> 
+
+	<node pkg="rosbag" type="play" name="player" output="screen" args="$(arg path)" respawn="true"/>
+
 </launch>

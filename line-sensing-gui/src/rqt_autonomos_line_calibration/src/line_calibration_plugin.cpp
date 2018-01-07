@@ -105,6 +105,16 @@ void line_calibration_plugin::initPlugin(qt_gui_cpp::PluginContext& context)
   connect(ui_.horizontalScrollBar_right,  SIGNAL(valueChanged(int)), this, SLOT(right_scroll_changed()));
   connect(ui_.horizontalScrollBar_center, SIGNAL(valueChanged(int)), this, SLOT(center_scroll_changed()));
   connect(ui_.horizontalScrollBar_left,   SIGNAL(valueChanged(int)), this, SLOT(left_scroll_changed()));
+
+  int default_x_center, default_x_right, default_x_left;
+  ros::param::param<int>("/line_detection_fu_node/defaultXCenter", default_x_center, -1);
+  ros::param::param<int>("/line_detection_fu_node/defaultXLeft", default_x_left, -1);
+  ros::param::param<int>("/line_detection_fu_node/defaultXRight", default_x_right, -1);
+
+  ui_.horizontalScrollBar_right -> setValue(default_x_right);
+  ui_.horizontalScrollBar_center -> setValue(default_x_center);
+  ui_.horizontalScrollBar_left -> setValue(default_x_left);
+
 }
 
 void line_calibration_plugin::shutdownPlugin()
@@ -548,10 +558,11 @@ void line_calibration_plugin::set_sliders_max_val(int max_val)
   ui_.horizontalScrollBar_left   -> setMaximum(max_val);
 }
 
+
 void line_calibration_plugin::right_scroll_changed()
 {
   int right_val = ui_.horizontalScrollBar_right->value();
-  ui_.label_right->setText(QString("<html><head/><body><p align=\"center\">Right - %1</p></body></html>").arg(right_val));
+  ui_.label_right->setText(QString("<html><head/><body><p align=\"center\">Right = %1</p></body></html>").arg(right_val));
 
   dynamic_reconfigure::ReconfigureRequest srv_req;
   dynamic_reconfigure::ReconfigureResponse srv_resp;
@@ -571,7 +582,7 @@ void line_calibration_plugin::center_scroll_changed()
 {
   // ui_.label_center->setText(QString("<html><head/><body><p align=\"center\">Center - %1</p></body></html>").arg(ui_.horizontalScrollBar_center->value()));
   int center_val = ui_.horizontalScrollBar_center->value();
-  ui_.label_right->setText(QString("<html><head/><body><p align=\"center\">Center - %1</p></body></html>").arg(center_val));
+  ui_.label_center->setText(QString("<html><head/><body><p align=\"center\">Center = %1</p></body></html>").arg(center_val));
 
   dynamic_reconfigure::ReconfigureRequest srv_req;
   dynamic_reconfigure::ReconfigureResponse srv_resp;
@@ -591,7 +602,7 @@ void line_calibration_plugin::left_scroll_changed()
 {
   // ui_.label_left->setText(QString("<html><head/><body><p align=\"center\">Left - %1</p></body></html>").arg(ui_.horizontalScrollBar_left->value()));
   int left_val = ui_.horizontalScrollBar_left->value();
-  ui_.label_left->setText(QString("<html><head/><body><p align=\"center\">Left - %1</p></body></html>").arg(left_val));
+  ui_.label_left->setText(QString("<html><head/><body><p align=\"center\">Left = %1</p></body></html>").arg(left_val));
 
   dynamic_reconfigure::ReconfigureRequest srv_req;
   dynamic_reconfigure::ReconfigureResponse srv_resp;
