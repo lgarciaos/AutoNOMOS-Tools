@@ -46,16 +46,16 @@ def keyboard_terminal():
         c = screen.getch()
         if c == curses.KEY_UP or c == ord("w"):
             # pub.publish()
-            speed += 10
-            pub_speed.publish(speed)
-        elif c == curses.KEY_DOWN or c == ord("s"):
             speed -= 10
             pub_speed.publish(speed)
+        elif c == curses.KEY_DOWN or c == ord("s"):
+            speed += 10
+            pub_speed.publish(speed)
         elif c == curses.KEY_LEFT or c == ord("a"):
-            steering += 2
+            steering += 50
             pub_steer.publish(steering)
         elif c == curses.KEY_RIGHT or c == ord("d"):
-            steering -= 2
+            steering -= 50
             pub_steer.publish(steering)
         elif c == ord(" "):
             if start == 1:
