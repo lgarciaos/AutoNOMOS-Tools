@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gary/AutoNOMOS-Tools/line-sensing-gui/src
+CMAKE_SOURCE_DIR = /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gary/AutoNOMOS-Tools/line-sensing-gui/build
+CMAKE_BINARY_DIR = /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/gary/AutoNOMOS-Tools/line-sensing-gui/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gary/AutoNOMOS-Tools/line-sensing-gui/src /home/gary/AutoNOMOS-Tools/line-sensing-gui/src /home/gary/AutoNOMOS-Tools/line-sensing-gui/build /home/gary/AutoNOMOS-Tools/line-sensing-gui/build /home/gary/AutoNOMOS-Tools/line-sensing-gui/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/src /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/src /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/build /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/build /home/egranadoo/AutoNOMOS-Tools/line-sensing-gui/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 
