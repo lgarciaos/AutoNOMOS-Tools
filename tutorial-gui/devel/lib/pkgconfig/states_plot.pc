@@ -1,0 +1,8 @@
+prefix=/home/robotica/AutoNOMOS-Tools/tutorial-gui/devel
+
+Name: states_plot
+Description: Description of states_plot
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/robotica/AutoNOMOS-Tools/tutorial-gui/devel/lib 
+Requires: 

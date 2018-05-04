@@ -1,0 +1,8 @@
+prefix=/home/robotica/AutoNOMOS-Tools/tutorial-gui/install
+
+Name: opencv_gui
+Description: Description of opencv_gui
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/lib 
+Requires: 
