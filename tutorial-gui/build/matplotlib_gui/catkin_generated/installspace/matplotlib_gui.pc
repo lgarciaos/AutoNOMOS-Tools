@@ -1,8 +1,8 @@
 prefix=/home/robotica/AutoNOMOS-Tools/tutorial-gui/install
 
-Name: states_plot
-Description: Description of states_plot
-Version: 0.1.0
+Name: matplotlib_gui
+Description: Description of matplotlib_gui
+Version: 0.0.0
 Cflags: 
 Libs: -L/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/lib 
 Requires: 

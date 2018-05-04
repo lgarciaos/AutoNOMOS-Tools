@@ -1,2 +1,2 @@
-opencv_gui
+matplotlib_gui:opencv_gui
 -DCATKIN_DEVEL_PREFIX=/home/robotica/AutoNOMOS-Tools/tutorial-gui/devel -DCMAKE_INSTALL_PREFIX=/home/robotica/AutoNOMOS-Tools/tutorial-gui/install -G Unix Makefiles
