@@ -1,0 +1,2 @@
+occupancy_grid_visualization
+-DCATKIN_DEVEL_PREFIX=/home/egranadoo/autonomos_project/AutoNOMOS-Tools/sensors_visualization/devel -DCMAKE_INSTALL_PREFIX=/home/egranadoo/autonomos_project/AutoNOMOS-Tools/sensors_visualization/install -G Unix Makefiles
