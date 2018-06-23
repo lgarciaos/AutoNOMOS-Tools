@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/robotica/AutoNOMOS-Tools/tutorial-gui/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/robotica/AutoNOMOS-Tools/tutorial-gui/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/robotica/AutoNOMOS-Tools/tutorial-gui/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/robotica/AutoNOMOS-Tools/tutorial-gui/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/src:$ROS_PACKAGE_PATH"

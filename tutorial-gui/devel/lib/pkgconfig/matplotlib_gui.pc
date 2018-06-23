@@ -1,8 +1,8 @@
-prefix=/home/robotica/AutoNOMOS-Tools/tutorial-gui/devel
+prefix=/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/devel
 
 Name: matplotlib_gui
 Description: Description of matplotlib_gui
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/robotica/AutoNOMOS-Tools/tutorial-gui/devel/lib 
+Libs: -L/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/devel/lib 
 Requires: 

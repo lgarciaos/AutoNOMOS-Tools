@@ -1,24 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp
+Change Dir: /home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_11062/fast"
-/usr/bin/make -f CMakeFiles/cmTC_11062.dir/build.make CMakeFiles/cmTC_11062.dir/build
-make[1]: Entering directory '/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_11062.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_11062.dir/CheckSymbolExists.c.o   -c /home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_11062
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11062.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_11062.dir/CheckSymbolExists.c.o  -o cmTC_11062 -rdynamic 
-CMakeFiles/cmTC_11062.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/gmake" "cmTC_aefac/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_aefac.dir/build.make CMakeFiles/cmTC_aefac.dir/build
+gmake[1]: Entering directory '/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aefac.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_aefac.dir/CheckSymbolExists.c.o   -c /home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_aefac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aefac.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_aefac.dir/CheckSymbolExists.c.o  -o cmTC_aefac 
+CMakeFiles/cmTC_aefac.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_11062.dir/build.make:97: recipe for target 'cmTC_11062' failed
-make[1]: *** [cmTC_11062] Error 1
-make[1]: Leaving directory '/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_11062/fast' failed
-make: *** [cmTC_11062/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_aefac.dir/build.make:87: cmTC_aefac] Error 1
+gmake[1]: Leaving directory '/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:126: cmTC_aefac/fast] Error 2
 
-File /home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +32,20 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp
+Change Dir: /home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_105e0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_105e0.dir/build.make CMakeFiles/cmTC_105e0.dir/build
-make[1]: Entering directory '/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_105e0.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_105e0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_105e0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_105e0.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_105e0.dir/CheckFunctionExists.c.o  -o cmTC_105e0 -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/gmake" "cmTC_21446/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_21446.dir/build.make CMakeFiles/cmTC_21446.dir/build
+gmake[1]: Entering directory '/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21446.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_21446.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_21446
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21446.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_21446.dir/CheckFunctionExists.c.o  -o cmTC_21446 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_105e0.dir/build.make:97: recipe for target 'cmTC_105e0' failed
-make[1]: *** [cmTC_105e0] Error 1
-make[1]: Leaving directory '/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_105e0/fast' failed
-make: *** [cmTC_105e0/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_21446.dir/build.make:87: cmTC_21446] Error 1
+gmake[1]: Leaving directory '/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:126: cmTC_21446/fast] Error 2
 
 

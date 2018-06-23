@@ -1,8 +1,8 @@
-# Install script for directory: /home/robotica/AutoNOMOS-Tools/tutorial-gui/src
+# Install script for directory: /home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install")
+  set(CMAKE_INSTALL_PREFIX "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,10 +29,15 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   
       if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
         file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
@@ -42,83 +47,82 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
       endif()
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/_setup_util.py")
+   "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install" TYPE PROGRAM FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install" TYPE PROGRAM FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/env.sh")
+   "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install" TYPE PROGRAM FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install" TYPE PROGRAM FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/env.sh")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/setup.bash")
+   "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install/setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/setup.bash")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/setup.sh")
+   "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install/setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/setup.sh")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/setup.zsh")
+   "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install/setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/setup.zsh")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install/.rosinstall")
+   "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install" TYPE FILE FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/gtest/cmake_install.cmake")
-  include("/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/cmake_install.cmake")
-  include("/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/opencv_gui/cmake_install.cmake")
+  include("/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/cmake_install.cmake")
+  include("/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/opencv_gui/cmake_install.cmake")
 
 endif()
 
@@ -130,5 +134,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

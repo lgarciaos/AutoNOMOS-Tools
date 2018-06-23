@@ -1,8 +1,8 @@
-# Install script for directory: /home/robotica/AutoNOMOS-Tools/tutorial-gui/src/matplotlib_gui
+# Install script for directory: /home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/src/matplotlib_gui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robotica/AutoNOMOS-Tools/tutorial-gui/install")
+  set(CMAKE_INSTALL_PREFIX "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,21 +29,26 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/catkin_generated/installspace/matplotlib_gui.pc")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/catkin_generated/installspace/matplotlib_gui.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/matplotlib_gui/cmake" TYPE FILE FILES
-    "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/catkin_generated/installspace/matplotlib_guiConfig.cmake"
-    "/home/robotica/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/catkin_generated/installspace/matplotlib_guiConfig-version.cmake"
+    "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/catkin_generated/installspace/matplotlib_guiConfig.cmake"
+    "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/build/matplotlib_gui/catkin_generated/installspace/matplotlib_guiConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/matplotlib_gui" TYPE FILE FILES "/home/robotica/AutoNOMOS-Tools/tutorial-gui/src/matplotlib_gui/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/matplotlib_gui" TYPE FILE FILES "/home/egranadoo/autonomos_project/AutoNOMOS-Tools/tutorial-gui/src/matplotlib_gui/package.xml")
 endif()
 
