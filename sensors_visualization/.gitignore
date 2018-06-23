@@ -1,0 +1,8 @@
+src/CMakeLists.txt
+src/histogramfilter*
+**/*.*~
+build/
+install/
+logs/
+.catkin_tools/
+devel/
