@@ -1,8 +1,0 @@
-prefix=/home/egranadoo/autonomos_project/AutoNOMOS-Tools/sensors_visualization/install
-
-Name: occupancy_grid_visualization
-Description: Description of occupancy_grid_visualization
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/egranadoo/autonomos_project/AutoNOMOS-Tools/sensors_visualization/install/lib 
-Requires: 
