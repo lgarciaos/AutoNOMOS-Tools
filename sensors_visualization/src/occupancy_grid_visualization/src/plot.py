@@ -57,11 +57,13 @@ def draw_rectangles(img, x_i, y_i, x_f, y_f):
 			red = (41, 41, 178)
 			orange = (68, 192, 255)
 			blue = (255, 187, 0)
-			if laser_data[x + y * w] == -1:
+			if laser_data[x + y * w] <= -1:
 				color = red
-			else:
-				color = blue + (0, 0, int (255 - laser_data[x + y * w] * 255))
-
+			else: #[sum(x) for x in zip(a,b)]
+				print laser_data[x + y * w]
+				color = [sum(x) for x in zip (blue, (0, 0, int (255 - laser_data[x + y * w] * 255 / 100)))]
+				# color = blue + (0, 0, int (255 - laser_data[x + y * w] * 255))
+				print color
 			cv2.rectangle(img, top_left, bottom_right, color, -1)
 
 			# cv2.rectangle(img, ())
