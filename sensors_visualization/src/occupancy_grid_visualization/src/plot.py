@@ -12,7 +12,7 @@ w = None
 laser_data = None
 point_msg = None
 x = 0
-
+new_grid = True
 img_h = 768 # must be even
 img_w = 768 # must be even
 grid_line_colors = (255, 255, 255)
@@ -48,6 +48,24 @@ def draw_horizontal_lines(img, x_i, x_f):
 		draw_line(img, x_i,  y * img_h / h, x_f, y * img_w / w)
 	cv2.line(img, (x_i, img_h / 2), (x_f, img_h / 2), grid_axis_color, 1)
 
+def draw_rectangles(img, x_i, y_i, x_f, y_f):
+	for y in xrange(0, h):
+		for x in xrange(0, w):
+			# print "laser[", x + y * w , "]", laser_data[x + y * w]
+			top_left = (x * img_w / w, (y + 1) * img_h / h )
+			bottom_right = ((x + 1) * img_w / w, y * img_h / h)
+			red = (41, 41, 178)
+			orange = (68, 192, 255)
+			blue = (255, 187, 0)
+			if laser_data[x + y * w] == -1:
+				color = red
+			else:
+				color = blue + (0, 0, int (255 - laser_data[x + y * w] * 255))
+
+			cv2.rectangle(img, top_left, bottom_right, color, -1)
+
+			# cv2.rectangle(img, ())
+
 
 def draw_grid(img):
 	global h
@@ -56,6 +74,7 @@ def draw_grid(img):
 	y_f = 0
 	x_i = 0
 	x_f = img_w
+	draw_rectangles(img, x_i, y_i, x_f, y_f)
 	draw_vertical_lines(img, y_i, y_f)
 	draw_horizontal_lines(img, x_i, x_f)
 
@@ -69,8 +88,11 @@ while not rospy.is_shutdown():
 		cv2.putText(img,'Waiting for topic',(10,500), font, 1,(255,255,255),2,cv2.LINE_AA)
 
 	else:
+		
 		img = np.zeros((img_h, img_w, 3), np.uint8)
 		draw_grid(img)
+
+	
 		# font = cv2.FONT_HERSHEY_SIMPLEX
 		# cv2.putText(img,'OpenCV_tutorial',(10,500), font, 1,(255,255,255),2,cv2.LINE_AA)
 
