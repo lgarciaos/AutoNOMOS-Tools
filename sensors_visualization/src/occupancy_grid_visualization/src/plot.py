@@ -45,7 +45,7 @@ def draw_vertical_lines(img, y_i, y_f):
 
 def draw_horizontal_lines(img, x_i, x_f):
 	for y in xrange(0,h):
-		draw_line(img, x_i,  y * img_h / h, x_f, y * img_w / w)
+		draw_line(img, x_i,  y * img_h / h, x_f, y * img_h / h)
 	cv2.line(img, (x_i, img_h / 2), (x_f, img_h / 2), grid_axis_color, 1)
 
 def draw_rectangles(img, x_i, y_i, x_f, y_f):
@@ -60,22 +60,21 @@ def draw_rectangles(img, x_i, y_i, x_f, y_f):
 			if laser_data[x + y * w] <= -1:
 				color = red
 			else: #[sum(x) for x in zip(a,b)]
-				print laser_data[x + y * w]
+				# print laser_data[x + y * w]
 				color = [sum(x) for x in zip (blue, (0, 0, int (255 - laser_data[x + y * w] * 255 / 100)))]
 				# color = blue + (0, 0, int (255 - laser_data[x + y * w] * 255))
-				print color
+				# print color
 			cv2.rectangle(img, top_left, bottom_right, color, -1)
 
 			# cv2.rectangle(img, ())
 
 
 def draw_grid(img):
-	global h
-	global w
 	y_i = img_h
 	y_f = 0
 	x_i = 0
 	x_f = img_w
+	# print h, w
 	draw_rectangles(img, x_i, y_i, x_f, y_f)
 	draw_vertical_lines(img, y_i, y_f)
 	draw_horizontal_lines(img, x_i, x_f)
