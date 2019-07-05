@@ -1,0 +1,9 @@
+src/CMakeLists.txt
+**/*.*~
+build/
+install/
+logs/
+.catkin_tools/
+devel/lib
+devel/share
+devel/

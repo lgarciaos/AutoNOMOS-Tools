@@ -1,2 +1,0 @@
-keyboard_control
--DCATKIN_DEVEL_PREFIX=/home/robotica/AutoNOMOS-Tools/remote_control/devel -DCMAKE_INSTALL_PREFIX=/home/robotica/AutoNOMOS-Tools/remote_control/install -G Unix Makefiles
