@@ -11,22 +11,23 @@ import curses
 screen = None
 start = 0
 speed = 0
-steering = 1400
-
+# steering = 1400
+steering = 0
+robot_name = "AutoNOMOS_mini"
 def reset():
     global start
     global speed
     global steering
     start = 0
     speed = 0
-    steering = 1400
+    steering = 0
 
 def keyboard_terminal():
     pub_start = rospy.Publisher('/manual_control/stop_start', Int16, queue_size=1)
-    pub_speed = rospy.Publisher('/manual_control/speed', Int32, queue_size=1)
-    pub_steer = rospy.Publisher('/manual_control/steering', Int16, queue_size=1)
+    pub_speed = rospy.Publisher('/' + robot_name + '/manual_control/speed', Int16, queue_size=1)
+    pub_steer = rospy.Publisher('/' + robot_name + '/manual_control/steering', Int16, queue_size=1)
     rospy.init_node('keyboard_terminal', anonymous=True)
-    rate = rospy.Rate(10) # 10hz
+    rate = rospy.Rate(1) # 10hz
     screen = curses.initscr()
 
     curses.noecho()
@@ -38,6 +39,7 @@ def keyboard_terminal():
     screen.addstr("\tRIGHT: d or right arrow \n")
     screen.addstr("\tLEFT: a or left arrow \n")
     screen.addstr("\tSTART/STOP: spacebar \n")
+    # screen.addstr("")
     global start
     global speed
     global steering
@@ -74,6 +76,10 @@ def keyboard_terminal():
             pub_start.publish(start)
             pub_speed.publish(speed)
             pub_steer.publish(steering)
+        # curses.setsyx(10,0);
+        # curses.clrtoeol();
+        screen.addstr(7, 5, "\tSPEED: " + str(speed) + " \n")
+        screen.addstr(8, 5, "\tSTEER: " + str(steering) + " \n")
 
         screen.refresh()
         # screen.getch()
